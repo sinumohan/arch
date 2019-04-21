@@ -12,7 +12,7 @@ import {
 
 import './srd.css';
 
-class DemoSeven extends React.Component {
+class Diagram extends React.Component {
 	componentWillMount() {
 		this.engine = new DiagramEngine();
 
@@ -20,9 +20,6 @@ class DemoSeven extends React.Component {
 		this.engine.registerLinkFactory(new DefaultLinkFactory());
 
 		const model = new DiagramModel();
-
-		// Set the grid size HERE!
-		model.setGridSize(50);
 
 		const node1 = new DefaultNodeModel('Node 1', 'rgb(0,192,255)');
 		const port1 = node1.addPort(new DefaultPortModel(false, 'out-1', 'Out'));
@@ -53,4 +50,4 @@ class DemoSeven extends React.Component {
 	}
 }
 
-export default DemoSeven;
+export default Diagram;
